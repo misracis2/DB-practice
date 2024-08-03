@@ -1,6 +1,7 @@
-package org.example.mysqlpractice.domain;
+package org.example.mysqlpractice.domain.rollbackMarkPractice.repository;
 
 import jakarta.transaction.Transactional;
+import org.example.mysqlpractice.domain.rollbackMarkPractice.enitty.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

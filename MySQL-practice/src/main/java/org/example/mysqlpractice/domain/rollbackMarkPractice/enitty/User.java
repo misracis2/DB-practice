@@ -1,4 +1,4 @@
-package org.example.mysqlpractice.domain;
+package org.example.mysqlpractice.domain.rollbackMarkPractice.enitty;
 
 import jakarta.persistence.*;
 import lombok.Getter;
