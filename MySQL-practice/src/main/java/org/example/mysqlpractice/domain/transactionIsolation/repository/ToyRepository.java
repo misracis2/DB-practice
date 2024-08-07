@@ -11,5 +11,6 @@ public interface ToyRepository extends JpaRepository<Toy, Long> {
     @Transactional
     List<Toy> findBySeqGreaterThan(Long seq);
 
-    Toy findByName(String name);
+    @Transactional
+    Toy findFirstByName(String name);
 }

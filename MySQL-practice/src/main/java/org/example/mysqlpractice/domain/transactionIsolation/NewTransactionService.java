@@ -24,4 +24,11 @@ public class NewTransactionService {
         toyRepository.save(toy);
         log.info("update toy : {}", toy.toString());
     }
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void insertNewTransaction() {
+        Toy toy = new Toy();
+        toy.setName("new toy");
+        toyRepository.save(toy);
+    }
 }
