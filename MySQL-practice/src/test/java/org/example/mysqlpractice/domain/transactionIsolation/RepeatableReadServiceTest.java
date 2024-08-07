@@ -16,8 +16,7 @@ class RepeatableReadServiceTest {
     void insertDuringSelectTwice() {
         repeatableReadService.insertDuringSelectTwice();
     }
-
-
+    
     @DisplayName("REPEATABLE_READ 테스트")
     @Test
     void updateDuringSelectTwice() {
