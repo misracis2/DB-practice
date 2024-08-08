@@ -27,13 +27,13 @@ public class RepeatableReadService {
 
     @Transactional(isolation = Isolation.REPEATABLE_READ)
     public void insertDuringSelectTwice() {
-        Toy toys = toyRepository.findFirstByName("new Toy");
-        log.info("first select toy : {}", toys.toString());
+        List<Toy> toys = toyRepository.findBySeqGreaterThan(2L);
+        log.info("first select toy : {}", toys.size());
 
         newTransactionService.insertNewTransaction();
 
-        Toy toys2 = toyRepository.findFirstByName("new Toy");
-        log.info("second select toy : {}", toys2.toString());
+        List<Toy >toys2 = toyRepository.findBySeqGreaterThan(2L);
+        log.info("second select toy : {}", toys2.size());
     }
 
 

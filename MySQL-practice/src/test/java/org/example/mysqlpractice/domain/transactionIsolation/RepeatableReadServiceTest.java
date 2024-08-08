@@ -11,7 +11,7 @@ class RepeatableReadServiceTest {
     @Autowired
     private RepeatableReadService repeatableReadService;
 
-    @DisplayName("팬텀 리드 테스트")
+    @DisplayName("새로운 트랜잭션에서 INSERT 가 발생해도 동일한 select 결과를 보장한다.")
     @Test
     void insertDuringSelectTwice() {
         repeatableReadService.insertDuringSelectTwice();
